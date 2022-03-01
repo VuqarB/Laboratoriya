@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #3d3d3d;
+}
+
+.container {
+    display: flex; 
+    transform-style: preserve-3d;
+    gap: 10px;
+    transform: rotateY(30deg) rotateX(10deg);
+
+    &:hover {
+        .text {
+            transform: rotateX(-270deg);
+        }
+
+        .text:last-child {
+            transform: rotateX(810deg);
+        }
+    }
+
+    .text {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transition: 2.5s ease-in-out;
+        transition-delay: calc(.25s * var(--j));
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #373737;
+            transform-origin: left;
+            transform: rotateY(90deg) translateX(-50px);
+        }
+
+        &:last-child {
+            span {
+                background: linear-gradient(#29c040, #32ed4e);
+                color: #333;
+            }
+            &::before {
+                background: #29ab3c;
+            }
+        }
+
+        span {
+            position: absolute;
+            inset: 0 auto auto 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#434343, #535353);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: #fff;
+            transform-style: preserve-3d;
+            transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+        }
+    }
+}

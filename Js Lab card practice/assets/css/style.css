@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#practice {
+  background: purple;
+  padding: 120px 0;
+}
+
+#practice .box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 400px;
+  background: #999;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+#practice .box__content {
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);
+  text-align: center;
+  color: #fff;
+  -webkit-transform: translateZ(80px);
+          transform: translateZ(80px);
+}
+
+#practice .box__content .box__head {
+  color: #777;
+  font-size: .9em;
+  font-weight: 700;
+}
+
+#practice .box__content .box__title {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+#practice .box__content .box__subtitle {
+  font-size: 1em;
+}
+
+#practice .box:hover {
+  -webkit-transform: rotateY(45deg);
+          transform: rotateY(45deg);
+}
+/*# sourceMappingURL=style.css.map */

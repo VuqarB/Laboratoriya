@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.cardPractice {
+  padding: 120px 0;
+  background: #131313;
+}
+
+.cardPractice .box {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #232323;
+  border-radius: 20px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.cardPractice .box::before {
+  content: "NIKE";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 5em;
+  color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.cardPractice .box::after {
+  content: "SHOES";
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 4em;
+  color: #fff;
+  font-weight: 900;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.cardPractice .box__name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 75px);
+          transform: translate3d(0, 0, 75px);
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+}
+
+.cardPractice .box__buy {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, 0, 75px);
+          transform: translate3d(-50%, 0, 75px);
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: #333;
+  padding: 10px 30px;
+  border-radius: 30px;
+  opacity: 0;
+}
+
+.cardPractice .box__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 1;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 50px);
+          transform: translate3d(-50%, -50%, 50px);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cardPractice .box__product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  max-width: 300px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+          transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cardPractice .box__circle, .cardPractice .box__buy {
+  background: #9bdc28;
+}
+
+.cardPractice .box:hover::before, .cardPractice .box:hover::after {
+  opacity: .04;
+}
+
+.cardPractice .box:hover .box__name {
+  top: 40px;
+  opacity: 1;
+}
+
+.cardPractice .box:hover .box__buy {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.cardPractice .box:hover .box__product {
+  -webkit-transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+          transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+/*# sourceMappingURL=style.css.map */

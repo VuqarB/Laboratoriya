@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+   
+
+#practice {
+    background: purple;
+    padding: 120px 0;
+
+    .box {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 400px;
+        background: #999;
+        box-shadow: 20px 20px 20px rgba($color: #000, $alpha: .5);
+        transform-style: preserve-3d;
+        transition: all 1s linear;
+       
+        &__content {
+            transform: perspective(800px);
+            text-align: center;
+            color: #fff;
+            transform: translateZ(80px);
+            
+            .box__head {
+                color: #777;
+                font-size: .9em;
+                font-weight: 700;
+            }
+
+            .box__title {
+                font-size: 1.8em;
+                font-weight: 600;
+            }
+
+            .box__subtitle {
+                font-size: 1em;
+            }
+        }
+
+        &:hover {
+            transform: rotateY(45deg);
+        }
+    }
+}
